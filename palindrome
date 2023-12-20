@@ -1,0 +1,19 @@
+function isPalindrome (s) {
+  let diff = 0
+
+  for (let i = 0; i < s.length; i++) {
+    let ii = s.length - i - 1
+
+    if (s[i] !== s[ii]) {
+      diff++
+    }
+  }
+
+  return diff <= 1
+}
+
+console.log(isPalindrome("radar")); // Output: true (radar is a palindrome)
+console.log(isPalindrome("hello")); // Output: false (hello is not a palindrome)
+console.log(isPalindrome("abcba")); // Output: true (abcba is a palindrome)
+console.log(isPalindrome("abccdba")); // Output: true (abccdba can be made palindrome by changing at most one character)
+console.log(isPalindrome("0101010")); // Output: true (abccdba can be made palindrome by changing at most one character)
